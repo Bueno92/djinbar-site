@@ -21,7 +21,7 @@ Avant de le créer, vérifier dans GitHub que `Bueno92/djinbar-site` n'existe pa
 les dépôts privés. Puis exécuter :
 
 ```sh
-cd "/Users/bueno/Documents/Codex/2026-09-24/contexte-produit-djinbar-djinbar-est-une/djinbar-site"
+cd "/Users/bueno/Documents/Codex/2026-09-24/contexte-produit-djinbar-djinbar-est-une/outputs/djinbar-site"
 git remote add origin https://github.com/Bueno92/djinbar-site.git
 git remote -v
 git push -u origin main
