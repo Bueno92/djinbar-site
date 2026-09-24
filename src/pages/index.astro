@@ -33,39 +33,27 @@ const structuredData = {
 
   <main id="main">
     <section class="hero" id="hero">
-      <div class="hero-atmosphere" aria-hidden="true">
-        <span class="aurora aurora-one"></span>
-        <span class="aurora aurora-two"></span>
-        <span class="aurora aurora-three"></span>
-      </div>
       <div class="hero-copy">
         <p class="eyebrow">Chrome extension</p>
         <h1 class="visually-hidden">Djinbar</h1>
         <div class="brand-animation" aria-hidden="true">
-          <div class="logo-stage">
+          <div class="symbol-stage">
             <span class="intro-spark"></span>
             <img
-              class="logo-layer ribbon-layer"
-              src="/brand/djinbar-logo.png"
+              class="animated-symbol"
+              src="/brand/djinbar-symbol.png"
               alt=""
-              width="2172"
-              height="724"
-            />
-            <img
-              class="logo-layer charm-layer"
-              src="/brand/djinbar-logo.png"
-              alt=""
-              width="2172"
-              height="724"
-            />
-            <img
-              class="logo-layer wordmark-layer"
-              src="/brand/djinbar-logo.png"
-              alt=""
-              width="2172"
-              height="724"
+              width="1254"
+              height="1254"
             />
           </div>
+          <img
+            class="animated-wordmark"
+            src="/brand/djinbar-wordmark.png"
+            alt=""
+            width="2172"
+            height="724"
+          />
         </div>
         <p class="tagline">The bookmarks bar, rethought.</p>
         <p class="lede">{description}</p>
@@ -85,29 +73,6 @@ const structuredData = {
         {!chromeStoreUrl && <p class="availability">Chrome Web Store link coming soon.</p>}
       </div>
 
-      <div class="bar-preview" aria-label="Preview of Djinbar's workspace bookmark bar">
-        <div class="browser-rail" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="workspace-row">
-          <div class="workspace-switcher">
-            <span class="workspace-dot">D</span>
-            <strong>Dev</strong>
-            <span class="chevron">⌄</span>
-          </div>
-          <div class="family">
-            <span class="family-label">Build</span>
-            <span class="bookmark">GitHub</span>
-            <span class="bookmark">Vercel</span>
-          </div>
-          <div class="family">
-            <span class="family-label">Docs</span>
-            <span class="bookmark">Astro</span>
-            <span class="bookmark">MDN</span>
-          </div>
-          <button class="more" type="button" aria-label="More bookmarks" disabled>•••</button>
-        </div>
-      </div>
     </section>
   </main>
 
