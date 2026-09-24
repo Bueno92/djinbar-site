@@ -20,8 +20,7 @@ const structuredData = {
 <BaseLayout title={title} description={description} structuredData={structuredData}>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Djinbar home">
-      <span class="brand-mark" aria-hidden="true">D</span>
-      <span>Djinbar</span>
+      <img src="/brand/djinbar-logo.png" alt="Djinbar" width="2172" height="724" />
     </a>
     <a
       class:list={["header-cta", { disabled: !chromeStoreUrl }]}
@@ -34,10 +33,40 @@ const structuredData = {
 
   <main id="main">
     <section class="hero" id="hero">
-      <div class="glow" aria-hidden="true"></div>
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="aurora aurora-one"></span>
+        <span class="aurora aurora-two"></span>
+        <span class="aurora aurora-three"></span>
+      </div>
       <div class="hero-copy">
         <p class="eyebrow">Chrome extension</p>
-        <h1>Djinbar</h1>
+        <h1 class="visually-hidden">Djinbar</h1>
+        <div class="brand-animation" aria-hidden="true">
+          <div class="logo-stage">
+            <span class="intro-spark"></span>
+            <img
+              class="logo-layer ribbon-layer"
+              src="/brand/djinbar-logo.png"
+              alt=""
+              width="2172"
+              height="724"
+            />
+            <img
+              class="logo-layer charm-layer"
+              src="/brand/djinbar-logo.png"
+              alt=""
+              width="2172"
+              height="724"
+            />
+            <img
+              class="logo-layer wordmark-layer"
+              src="/brand/djinbar-logo.png"
+              alt=""
+              width="2172"
+              height="724"
+            />
+          </div>
+        </div>
         <p class="tagline">The bookmarks bar, rethought.</p>
         <p class="lede">{description}</p>
         <a
@@ -83,7 +112,8 @@ const structuredData = {
   </main>
 
   <footer>
-    <span>© 2026 Djinbar</span>
+    <img src="/brand/djinbar-wordmark.png" alt="Djinbar" width="2172" height="724" />
+    <span>© 2026</span>
     <span>Independent technical preview.</span>
   </footer>
 </BaseLayout>
