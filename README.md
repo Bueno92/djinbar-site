@@ -39,6 +39,8 @@ settings are required when Dockerfile mode is selected.
 
 Canonical production URL: `https://djinbar.com`.
 
+See [`docs/DOKPLOY.md`](docs/DOKPLOY.md) for the exact GitHub, Dokploy, domain, and DNS setup.
+
 ## Before the public launch
 
 - Set `chromeStoreUrl` in `src/lib/config.ts` when the extension listing is public.
