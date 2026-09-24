@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { chromeStoreUrl, siteUrl } from "../lib/config";
+
+const title = "Djinbar — The bookmarks bar, rethought.";
+const description =
+  "Turn your bookmarks bar into contextual workspaces, always within reach while you browse.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Djinbar",
+  applicationCategory: "BrowserApplication",
+  operatingSystem: "Chrome",
+  description,
+  url: siteUrl,
+};
+---
+
+<BaseLayout title={title} description={description} structuredData={structuredData}>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Djinbar home">
+      <span class="brand-mark" aria-hidden="true">D</span>
+      <span>Djinbar</span>
+    </a>
+    <a
+      class:list={["header-cta", { disabled: !chromeStoreUrl }]}
+      href={chromeStoreUrl ?? "#hero"}
+      aria-disabled={!chromeStoreUrl ? "true" : undefined}
+    >
+      Add to Chrome
+    </a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Chrome extension</p>
+        <h1>Djinbar</h1>
+        <p class="tagline">The bookmarks bar, rethought.</p>
+        <p class="lede">{description}</p>
+        <a
+          class:list={["primary-cta", { disabled: !chromeStoreUrl }]}
+          href={chromeStoreUrl ?? "#hero"}
+          aria-disabled={!chromeStoreUrl ? "true" : undefined}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 1 0 8.66 15H12a5 5 0 0 1-4.33-7.5L5.17 5.17A9.96 9.96 0 0 0 12 2Z" />
+            <path d="M12 2a10 10 0 0 1 8.66 5H12a5 5 0 0 0-4.33 2.5L5.17 5.17A9.96 9.96 0 0 1 12 2Z" />
+            <path d="M20.66 7A10 10 0 0 1 20.66 17H12a5 5 0 0 0 0-10h8.66Z" />
+            <circle cx="12" cy="12" r="3.1" />
+          </svg>
+          Add to Chrome
+        </a>
+        {!chromeStoreUrl && <p class="availability">Chrome Web Store link coming soon.</p>}
+      </div>
+
+      <div class="bar-preview" aria-label="Preview of Djinbar's workspace bookmark bar">
+        <div class="browser-rail" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="workspace-row">
+          <div class="workspace-switcher">
+            <span class="workspace-dot">D</span>
+            <strong>Dev</strong>
+            <span class="chevron">⌄</span>
+          </div>
+          <div class="family">
+            <span class="family-label">Build</span>
+            <span class="bookmark">GitHub</span>
+            <span class="bookmark">Vercel</span>
+          </div>
+          <div class="family">
+            <span class="family-label">Docs</span>
+            <span class="bookmark">Astro</span>
+            <span class="bookmark">MDN</span>
+          </div>
+          <button class="more" type="button" aria-label="More bookmarks" disabled>•••</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Djinbar</span>
+    <span>Independent technical preview.</span>
+  </footer>
+</BaseLayout>
