@@ -220,17 +220,19 @@ button { font: inherit; }
 .brand-animation {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: min(100%, 760px);
-  height: clamp(210px, 28vw, 285px);
-  margin: 0.75rem auto 0;
+  gap: clamp(0.15rem, 0.5vw, 0.4rem);
+  width: min(100%, 560px);
+  height: clamp(300px, 35vw, 345px);
+  margin: 0.6rem auto 0;
 }
 
 .brand-animation::before {
   content: "";
   position: absolute;
-  inset: 12% 10% 6%;
+  inset: 5% 5% 0;
   z-index: -1;
   border-radius: 50%;
   background:
@@ -243,9 +245,9 @@ button { font: inherit; }
 .symbol-stage {
   position: relative;
   z-index: 2;
-  flex: 0 0 clamp(185px, 29vw, 260px);
-  aspect-ratio: 1;
-  margin-right: clamp(-38px, -4vw, -20px);
+  flex: 0 0 auto;
+  width: clamp(160px, 20vw, 190px);
+  height: clamp(160px, 20vw, 190px);
 }
 
 .animated-symbol {
@@ -259,7 +261,8 @@ button { font: inherit; }
 .animated-wordmark {
   position: relative;
   z-index: 1;
-  width: min(71%, 560px);
+  flex: 0 0 auto;
+  width: min(76%, 420px);
   height: auto;
   filter: drop-shadow(0 15px 28px rgba(161, 64, 211, 0.12));
 }
@@ -292,7 +295,7 @@ button { font: inherit; }
 .intro-spark::after { transform: translate(-50%, -50%) rotate(45deg); }
 
 .tagline {
-  margin: 1.05rem 0 0;
+  margin: 1.65rem 0 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.75rem, 4.2vw, 3rem);
   font-weight: 400;
@@ -466,10 +469,10 @@ button { font: inherit; }
 
 @media (max-width: 680px) {
   .hero { min-height: 100svh; padding-top: 3.8rem; padding-bottom: 5.8rem; }
-  .brand-animation { height: clamp(150px, 38vw, 190px); }
-  .symbol-stage { flex-basis: clamp(125px, 37vw, 165px); margin-right: -24px; }
-  .animated-wordmark { width: min(72%, 360px); }
-  .tagline { margin-top: 1.15rem; }
+  .brand-animation { gap: 0.2rem; height: clamp(240px, 66vw, 280px); }
+  .symbol-stage { width: clamp(122px, 35vw, 145px); height: clamp(122px, 35vw, 145px); }
+  .animated-wordmark { width: min(78%, 300px); }
+  .tagline { margin-top: 1.45rem; }
   .lede { max-width: 34rem; margin-top: 1rem; }
   .ambient-glow { filter: blur(82px); }
   .footer-inner {
