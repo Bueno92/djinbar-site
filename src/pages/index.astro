@@ -18,21 +18,15 @@ const structuredData = {
 ---
 
 <BaseLayout title={title} description={description} structuredData={structuredData}>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Djinbar home">
-      <img src="/brand/djinbar-logo.png" alt="Djinbar" width="2172" height="724" />
-    </a>
-    <a
-      class:list={["header-cta", { disabled: !chromeStoreUrl }]}
-      href={chromeStoreUrl ?? "#hero"}
-      aria-disabled={!chromeStoreUrl ? "true" : undefined}
-    >
-      Add to Chrome
-    </a>
-  </header>
-
   <main id="main">
     <section class="hero" id="hero">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="ambient-glow ambient-glow-violet"></span>
+        <span class="ambient-glow ambient-glow-magenta"></span>
+        <span class="ambient-glow ambient-glow-blue"></span>
+        <span class="ambient-trace"></span>
+        <span class="ambient-dust"></span>
+      </div>
       <div class="hero-copy">
         <p class="eyebrow">Chrome extension</p>
         <h1 class="visually-hidden">Djinbar</h1>
@@ -76,9 +70,17 @@ const structuredData = {
     </section>
   </main>
 
-  <footer>
-    <img src="/brand/djinbar-wordmark.png" alt="Djinbar" width="2172" height="724" />
-    <span>© 2026</span>
-    <span>Independent technical preview.</span>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/brand/djinbar-wordmark.png" alt="Djinbar" width="2172" height="724" />
+        <span>© 2026 Djinbar</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/privacy">Politique de confidentialité</a>
+        <a href="mailto:contact@djinbar.com">Contact</a>
+      </nav>
+    </div>
   </footer>
 </BaseLayout>
